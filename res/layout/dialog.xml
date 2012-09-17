@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialogLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/game_over_bg"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/game_over_text"
+        android:src="@drawable/game_over" />
+
+    <RelativeLayout
+        android:id="@+id/rell1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/replay_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/replay" />
+
+        <Button
+            android:id="@+id/exit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/replay_btn"
+            android:background="@drawable/exit" />
+
+       
+    </RelativeLayout>
+    
+    
+     <EditText
+            android:id="@+id/editName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rell1"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:hint="@string/enter_name"
+            android:inputType="textNoSuggestions"
+            android:visibility="invisible"/>
+    
+      <ImageButton
+          android:id="@+id/ok_btn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:layout_below="@+id/rell1"
+          android:layout_toRightOf="@+id/editName"
+          android:background="@drawable/ok_btn"
+          android:visibility="invisible" 
+          android:contentDescription="@string/app_name"/>
+
+</RelativeLayout>

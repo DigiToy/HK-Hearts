@@ -1,0 +1,21 @@
+<resources>
+
+    <string name="app_name">Hello Kitty Hearts</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="title_activity_info">InfoActivity</string>
+    <string name="game_over_text">Game Over</string>
+    <string name="ok">OK</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="wallpaper_thumb">Bla bla</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="wallpaper_saved">Wallpaper Saved</string>
+    <string name="wallpaper_changed">Wallpaper Changed</string>
+    <string name="wallpaper_locked_1">Wallpaper locked, you must collect</string>
+    <string name="wallpaper_locked_2">hearts to unlock</string>
+    
+    <color name="violet">#920497</color>
+
+</resources>
