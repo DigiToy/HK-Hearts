@@ -15,6 +15,7 @@
     <string name="wallpaper_changed">Wallpaper Changed</string>
     <string name="wallpaper_locked_1">Wallpaper locked, you must collect</string>
     <string name="wallpaper_locked_2">hearts to unlock</string>
+    <string name="no_highscores">There aren\'t any scores</string>
     
     <color name="violet">#920497</color>
 

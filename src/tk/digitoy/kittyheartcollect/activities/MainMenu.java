@@ -53,8 +53,8 @@ public class MainMenu extends Activity {
 	public static int score = 0;
 	public static String nameHighScores = "Player";
 	private TextView scoreView;
-	int scoreCount;
-	public Typeface newFont;
+
+	// int scoreCount;
 
 	// Shared preferences
 
@@ -63,7 +63,8 @@ public class MainMenu extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_menu);
 
-		newFont = Typeface.createFromAsset(getAssets(), "zombie.ttf");
+		AppSettings.newFont = Typeface.createFromAsset(getAssets(),
+				"zombie.ttf");
 
 		DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -154,7 +155,7 @@ public class MainMenu extends Activity {
 		lpScoreView.topMargin = dispHeight * 580 / 768;
 		lpScoreView.leftMargin = dispWidth * 155 / 1280;
 		scoreView.setLayoutParams(lpScoreView);
-		scoreView.setTypeface(newFont);
+		scoreView.setTypeface(AppSettings.newFont);
 		scoreView.setText(nameHighScores + " : " + score);
 
 	}
@@ -191,8 +192,7 @@ public class MainMenu extends Activity {
 
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(MainMenu.this,
-						HeartCollect.class);
+				Intent intent = new Intent(MainMenu.this, HeartCollect.class);
 				startActivity(intent);
 			}
 		});
@@ -225,23 +225,30 @@ public class MainMenu extends Activity {
 
 	public void highScoresButtonInit() {
 		highScoresButton = (ImageButton) findViewById(R.id.hiScore);
-		scoreCount = 0;
 
 		highScoresButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				if (scoreCount == 0) {
-
-					scoreView.setVisibility(View.VISIBLE);
-					scoreCount = 1;
-				} else {
-					scoreView.setVisibility(View.GONE);
-					scoreCount = 0;
-				}
-
+				startActivity(new Intent(getBaseContext(), HighScores.class));
 			}
 		});
+		// scoreCount = 0;
+		//
+		// highScoresButton.setOnClickListener(new OnClickListener() {
+		//
+		// public void onClick(View v) {
+		// // TODO Auto-generated method stub
+		// if (scoreCount == 0) {
+		//
+		// scoreView.setVisibility(View.VISIBLE);
+		// scoreCount = 1;
+		// } else {
+		// scoreView.setVisibility(View.GONE);
+		// scoreCount = 0;
+		// }
+		//
+		// }
+		// });
 	}
 
 	public void moreGamesButtonInit() {

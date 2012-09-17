@@ -1,6 +1,7 @@
 package tk.digitoy.kittyheartcollect.utils;
 
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 
 public class AppSettings {
 
@@ -18,4 +19,7 @@ public class AppSettings {
 	// Unlock scores
 	public static final int[] lockscore = { 50, 100, 150, 200, 250, 300, 400,
 			600, 800, 1000 };
+
+	// TypeFace
+	public static Typeface newFont;
 }

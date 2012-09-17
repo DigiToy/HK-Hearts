@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import tk.digitoy.kittyheartcollect.activities.HeartCollect.GameView.GameFigure;
 import tk.digitoy.kittyheartcollect.utils.AppSettings;
+import tk.digitoy.kittyheartcollect.utils.ScoreModel;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
@@ -1309,6 +1310,8 @@ public class HeartCollect extends Activity {
 					Toast.makeText(HeartCollect.this,
 							"Username too long", Toast.LENGTH_SHORT).show();
 				} else if (score < cutchImages && !name.equals("")) {
+					
+					new ScoreModel(getBaseContext()).add(name, cutchImages);
 
 					SharedPreferences.Editor editor = AppSettings.prefs.edit();
 					editor.putString("Player Name", name);
